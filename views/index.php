@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>tode - The Online Directory of Equations</title>
         <link rel="stylesheet" href="styles/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i|PT+Serif:700" rel="stylesheet">
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=AM_CHTML'></script>
     </head>
     <body>
@@ -13,7 +14,7 @@
 
             <h3>Search:</h3>
             <form class="search" action="search.php" method="get">
-                <input type="search" name="query" placeholder="e.g. #100, sin, chain rule">
+                <input type="text" name="query" placeholder="e.g. #100, sin, chain rule">
                 <input type="submit" value="Search">
             </form>
 
@@ -81,7 +82,7 @@
                 <p>
                     Uses <a href="http://asciimath.org">asciimath</a> syntax.
                 </p>
-                <input type="search" name="equation" placeholder="E = mc^2">
+                <input type="text" name="equation" placeholder="E = mc^2">
                 <input type="submit" value="Add">
             </form>
         </div>
