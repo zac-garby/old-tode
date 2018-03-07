@@ -81,7 +81,7 @@
                 <p>
                     Uses <a href="http://asciimath.org">asciimath</a> syntax.
                 </p>
-                <input type="search" name="equation" placeholder="e.g. E = mc^2">
+                <input type="search" name="equation" placeholder="E = mc^2">
                 <input type="submit" value="Add">
             </form>
         </div>
