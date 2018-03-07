@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+div.wrapper {
+    width: 800px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+div.wrapper h1:first-child {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+div.wrapper h2:nth-child(2) {
+    text-align: center;
+    margin-top: 0;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+form.search input[type=search] {
+    width: 85%;
+}
+
+form.search input[type=submit] {
+    width: 10%;
+}
+
+form.add-eq input[type=search] {
+    width: 85%;
+}
+
+form.add-eq input[type=submit] {
+    width: 10%;
+}
+
+form.add-eq p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+table.equations {
+    width: 100%;
+    table-layout: fixed;
+}
+
+table.equations tr {
+    height: 30px;
+    border-bottom: 1px solid black;
+}
+
+table.equations td {
+    overflow: hidden;
+    height: 30px;
+}
+
+table.equations td:nth-child(1) {
+    width: 50px;
+}
+
+table.equations td:nth-child(2) {
+    width: 300px;
+}
+
+table.equations thead {
+    font-weight: bold;
+}
