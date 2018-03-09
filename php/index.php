@@ -57,15 +57,6 @@
                 </tr>
                 <?php endforeach ?>
             </table>
-
-            <h3>Add an equation:</h3>
-            <form class="add-eq" action="add.php" method="get">
-                <p>
-                    Uses <a href="http://asciimath.org">asciimath</a> syntax.
-                </p>
-                <input type="text" name="equation" placeholder="E = mc^2">
-                <input type="submit" value="Add">
-            </form>
         </div>
     </body>
 </html>

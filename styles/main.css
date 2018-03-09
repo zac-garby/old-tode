@@ -52,11 +52,6 @@ form input[type=submit] {
     cursor: pointer;
 }
 
-form.add-eq p {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 table.equations {
     width: 100%;
     table-layout: fixed;
