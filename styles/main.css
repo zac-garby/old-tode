@@ -8,10 +8,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'PT Serif', serif;
 }
 
-ul.signup {
+a.login {
     position: fixed;
     top: 5px;
     left: 5px;
+    margin-right: -5px;
+    margin-bottom: -5px;
 }
 
 div.wrapper {
