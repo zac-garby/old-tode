@@ -5,7 +5,7 @@ $router = new AltoRouter();
 $router->setBasePath('/tode/');
 
 $router->map('GET', '', function() {
-    require __DIR__ . '/views/index.php';
+    require __DIR__ . '/php/index.php';
 });
 
 $match = $router->match();

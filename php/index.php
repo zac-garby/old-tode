@@ -8,23 +8,8 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=AM_CHTML'></script>
     </head>
     <body>
-        <?php
-        $user = 'root';
-        $password = 'root';
-        $db = 'tode';
-        $host = 'localhost';
-        $port = 8889;
-
-        $link = mysqli_init();
-        $success = mysqli_real_connect(
-           $link,
-           $host,
-           $user,
-           $password,
-           $db,
-           $port
-        );
-        ?>
+        <?php require "db.php" ?>
+        <a href="./login" class="login">log in / sign up</a>
         <div class="wrapper">
             <h1>tode</h1>
             <h2>The Online Directory of Equations</h2>
