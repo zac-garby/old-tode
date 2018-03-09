@@ -55,11 +55,11 @@ form input[type=submit] {
 table.equations {
     width: 100%;
     table-layout: fixed;
+    border-spacing: 0 20px;
 }
 
 table.equations tr {
     height: 30px;
-    border-bottom: 1px solid black;
 }
 
 table.equations td {
