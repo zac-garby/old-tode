@@ -8,6 +8,23 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=AM_CHTML'></script>
     </head>
     <body>
+        <?php
+        $user = 'root';
+        $password = 'root';
+        $db = 'tode';
+        $host = 'localhost';
+        $port = 8889;
+
+        $link = mysqli_init();
+        $success = mysqli_real_connect(
+           $link,
+           $host,
+           $user,
+           $password,
+           $db,
+           $port
+        );
+        ?>
         <div class="wrapper">
             <h1>tode</h1>
             <h2>The Online Directory of Equations</h2>
@@ -20,61 +37,40 @@
 
             <h3>A random set of 5:</h3>
             <table class="equations">
+                <?php
+                $result = mysqli_query(
+                    $link,
+                    "SELECT ID, equation, description
+                    FROM equations
+                    ORDER BY RAND()
+                    LIMIT 5"
+                );
+
+                $rows = $result->fetch_all();
+
+                foreach ($rows as $row) : ?>
                 <tr>
+                    <?php
+                    $ID = $row[0];
+                    $eq = $row[1];
+
+                    $desc = $row[2];
+                    if (strlen($desc) > 55) {
+                        $desc = wordwrap($desc, 55);
+                        $desc = substr($desc, 0, strpos($desc, "\n")) . "...";
+                    }
+                    ?>
                     <td>
-                        <a href="./view.php?id=5">#5</a>
+                        <?= "<a href=./view/$ID>#$ID</a>" ?>
                     </td>
                     <td>
-                        `sin^2\theta + cos^2\theta \equiv 1`
+                        `<?= htmlspecialchars($eq) ?>`
                     </td>
                     <td>
-                        Sine squared plus cosine squared is equivalent to 1.
+                        <?= htmlspecialchars($desc) ?>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <a href="./view.php?id=20">#20</a>
-                    </td>
-                    <td>
-                        `F = ma`
-                    </td>
-                    <td>
-                        Force equals mass times acceleration.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="./view.php?id=73">#73</a>
-                    </td>
-                    <td>
-                        `E = hf`
-                    </td>
-                    <td>
-                        Energy of a wave equals Planck's constant times the frequency.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="./view.php?id=11">#11</a>
-                    </td>
-                    <td>
-                        `1 - sin\theta \equiv cos\theta`
-                    </td>
-                    <td>
-                        One minus sine is equivalent to cosine.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="./view.php?id=105">#105</a>
-                    </td>
-                    <td>
-                        `d/dx u/v = (v(du)/dx - u(dv)/dx) / v^2`
-                    </td>
-                    <td>
-                        The chain rule.
-                    </td>
-                </tr>
+                <?php endforeach ?>
             </table>
 
             <h3>Add an equation:</h3>
