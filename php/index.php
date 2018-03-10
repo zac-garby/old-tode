@@ -52,7 +52,7 @@
                 <input type="submit" value="Search">
             </form>
 
-            <h3>A random set of 5:</h3>
+            <h3>Five random entries:</h3>
             <table class="equations">
                 <?php
                 $result = mysqli_query(
