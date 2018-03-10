@@ -29,7 +29,8 @@ if ($logged_in) :
 ?>
     <a href="#">☺︎ <?= $username ?></a> <br>
     <a href="#">log out</a> <br>
-    <a href="#">add an entry</a>
+    <a href="#">add an entry</a> <br>
+    <?php if ($admin) { echo '<a href="#">administrate</a>'; } ?>
 <?php else : ?>
     <a href="/login">log in / sign up</a>
 <?php endif ?>
