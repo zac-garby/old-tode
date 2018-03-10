@@ -17,12 +17,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     font-family: 'PT Serif', serif;
 }
 
-a.login {
+div.nav {
     position: fixed;
     top: 5px;
     left: 5px;
-    margin-right: -5px;
-    margin-bottom: -5px;
 }
 
 div.wrapper {

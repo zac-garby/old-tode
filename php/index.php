@@ -8,8 +8,10 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
     </head>
     <body>
-        <?php require "db.php" ?>
-        <a href="/login" class="login">log in / sign up</a>
+        <?php
+        require "db.php";
+        require "nav.php";
+        ?>
         <div class="wrapper">
             <h1><a href="/">tode</a></h1>
             <h2>The Online Directory of Equations, Identities, and Formulae</h2>
@@ -25,7 +27,7 @@
 
             <p>
                 You can also add items to the database. First, make an account.
-                Then a button will appear on this page labelled "Add equation".
+                Then, a button will appear on this page labelled "add an entry".
             </p>
 
             <h3>Search:</h3>

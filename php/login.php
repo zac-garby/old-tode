@@ -7,6 +7,10 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i|PT+Serif:700" rel="stylesheet">
     </head>
     <body>
+        <?php
+        require "db.php";
+        require "nav.php";
+        ?>
         <div class="wrapper">
             <h1><a href="/">tode</a></h1>
             <h2>log-in or sign-up</h2>
