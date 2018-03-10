@@ -3,6 +3,7 @@ require 'vendor/AltoRouter.php';
 
 $router = new AltoRouter();
 
+// Pages
 $router->map('GET', '/', function() {
     require __DIR__ . '/php/index.php';
 });
@@ -15,8 +16,13 @@ $router->map('GET', '/eq/[i:id]', function($id) {
     require __DIR__ . "/php/equation.php";
 });
 
+// Non-page routes
 $router->map('POST', '/newsession', function() {
     require __DIR__ . "/php/newsession.php";
+});
+
+$router->map('GET', '/logout', function() {
+    require __DIR__ . "/php/logout.php";
 });
 
 $match = $router->match();

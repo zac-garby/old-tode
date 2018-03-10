@@ -28,10 +28,11 @@ if ($sessid = $_COOKIE["sessid"]) {
 if ($logged_in) :
 ?>
     <a href="#">☺︎ <?= $username ?></a> <br>
-    <a href="#">log out</a> <br>
+    <a href="/logout">log out</a> <br>
     <a href="#">add an entry</a> <br>
     <?php if ($admin) { echo '<a href="#">administrate</a>'; } ?>
 <?php else : ?>
+    <?php setcookie("sessid", null, -1, "/") ?>
     <a href="/login">log in / sign up</a>
 <?php endif ?>
 </div>
