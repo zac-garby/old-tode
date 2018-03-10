@@ -2,10 +2,13 @@
 require 'vendor/AltoRouter.php';
 
 $router = new AltoRouter();
-$router->setBasePath('/tode/');
 
-$router->map('GET', '', function() {
+$router->map('GET', '/', function() {
     require __DIR__ . '/php/index.php';
+});
+
+$router->map('GET', '/login', function() {
+    require __DIR__ . '/php/login.php';
 });
 
 $match = $router->match();
