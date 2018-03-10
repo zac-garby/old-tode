@@ -5,10 +5,16 @@ new ones to the database.
 
 ![](assets/screenshot.png)
 
-It also has a HTTP API, with the following routes, each of which return data in
-JSON format.
+## To do
 
- - `/id/{id}`
- - `/search/{query}`
- - `/random`
- - `/random/{amount}`
+ - Equation pages, `/eq/{id}`
+ - API
+     - `/id/{id}`
+     - `/search/{query}`
+     - `/random`
+     - `/random/{amount}`
+ - Querying
+ - Users
+    - Signing up
+    - Logging in
+    - User pages
