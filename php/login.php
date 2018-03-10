@@ -13,14 +13,14 @@
             <h2>log-in or sign-up</h2>
 
             <div class="forms">
-                <form class="login" action="newsession.php" method="post">
+                <form class="login" action="newsession" method="post">
                     <h3>Log-in to an existing account:</h3>
                     <input type="text" name="username" placeholder="Username">
                     <input type="password" name="password" placeholder="Password">
                     <input type="submit" value="Log in">
                 </form>
 
-                <form class="signup" action="newuser.php" method="post">
+                <form class="signup" action="newuser" method="post">
                     <h3>Create a new account:</h3>
                     <input type="text" name="username" placeholder="Username">
                     <input type="text" name="email" placeholder="Email">
