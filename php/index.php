@@ -5,7 +5,7 @@
         <title>tode - The Online Directory of Equations</title>
         <link rel="stylesheet" href="styles/main.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i|PT+Serif:700" rel="stylesheet">
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=AM_CHTML'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
     </head>
     <body>
         <?php require "db.php" ?>
@@ -13,6 +13,7 @@
         <div class="wrapper">
             <h1><a href="/">tode</a></h1>
             <h2>The Online Directory of Equations, Identities, and Formulae</h2>
+            <br>
 
             <p>
                 <em>tode</em> is a place where you can browse a database of equations,
@@ -75,7 +76,7 @@
                     }
                     ?>
                     <td>
-                        <?= "<a href=./view/$ID>#$ID</a>" ?>
+                        <?= "<a href=./eq/$ID>#$ID</a>" ?>
                     </td>
                     <td>
                         `<?= htmlspecialchars($eq) ?>`

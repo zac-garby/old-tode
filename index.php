@@ -11,6 +11,10 @@ $router->map('GET', '/login', function() {
     require __DIR__ . '/php/login.php';
 });
 
+$router->map('GET', '/eq/[i:id]', function($id) {
+    require __DIR__ . "/php/equation.php";
+});
+
 $match = $router->match();
 
 if ($match && is_callable($match['target'])) {

@@ -44,8 +44,24 @@ div.wrapper h2:nth-child(2) {
     margin-top: 0;
 }
 
-h3 {
+h1.equation {
     margin-bottom: 0;
+}
+
+h2.sub {
+    font-weight: normal;
+    font-family: monospace;
+    color: grey;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2, h3 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
 }
 
 form input {
@@ -112,4 +128,16 @@ ul {
 
 code {
     font-family: monospace;
+}
+
+.center {
+    text-align: center;
+}
+
+.error {
+    color: rgb(221, 28, 28);
+    background-color: rgba(205, 89, 89, 0.25);
+    padding: 5px;
+    font-weight: normal;
+    font-style: italic;
 }
