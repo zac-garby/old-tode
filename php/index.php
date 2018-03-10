@@ -11,7 +11,7 @@
         <?php require "db.php" ?>
         <a href="./login" class="login">log in / sign up</a>
         <div class="wrapper">
-            <h1>tode</h1>
+            <h1><a href="/">tode</a></h1>
             <h2>The Online Directory of Equations, Identities, and Formulae</h2>
 
             <h3>Search:</h3>
