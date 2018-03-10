@@ -24,7 +24,6 @@
                     <input type="text" name="username" placeholder="Username">
                     <input type="text" name="email" placeholder="Email">
                     <input type="password" name="password" placeholder="Password">
-                    <input type="password" name="password-repeat" placeholder="Password repeat">
                     <input type="submit" value="Sign up">
                 </form>
             </div>

@@ -15,6 +15,10 @@ $router->map('GET', '/eq/[i:id]', function($id) {
     require __DIR__ . "/php/equation.php";
 });
 
+$router->map('POST', '/newsession', function() {
+    require __DIR__ . "/php/newsession.php";
+});
+
 $match = $router->match();
 
 if ($match && is_callable($match['target'])) {
