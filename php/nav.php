@@ -30,9 +30,10 @@ if ($logged_in) :
     <a href="#">☺︎ <?= $username ?></a> <br>
     <a href="/logout">log out</a> <br>
     <a href="#">add an entry</a> <br>
-    <?php if ($admin) {
-    echo '<a href="#">administrate</a>';
-} ?>
+    <?php
+    if ($admin) : ?>
+        <a href="#">administrate</a>
+    <?php endif ?>
 <?php else : ?>
     <?php setcookie("sessid", null, -1, "/") ?>
     <a href="/login">log in / sign up</a>
