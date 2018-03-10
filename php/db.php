@@ -14,4 +14,3 @@ $success = mysqli_real_connect(
    $db,
    $port
 );
-?>

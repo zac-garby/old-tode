@@ -4,24 +4,24 @@ require 'vendor/AltoRouter.php';
 $router = new AltoRouter();
 
 // Pages
-$router->map('GET', '/', function() {
+$router->map('GET', '/', function () {
     require __DIR__ . '/php/index.php';
 });
 
-$router->map('GET', '/login', function() {
+$router->map('GET', '/login', function () {
     require __DIR__ . '/php/login.php';
 });
 
-$router->map('GET', '/eq/[i:id]', function($id) {
+$router->map('GET', '/eq/[i:id]', function ($id) {
     require __DIR__ . "/php/equation.php";
 });
 
 // Non-page routes
-$router->map('POST', '/newsession', function() {
+$router->map('POST', '/newsession', function () {
     require __DIR__ . "/php/newsession.php";
 });
 
-$router->map('GET', '/logout', function() {
+$router->map('GET', '/logout', function () {
     require __DIR__ . "/php/logout.php";
 });
 

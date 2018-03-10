@@ -1,10 +1,10 @@
 <div class="nav">
 <?php
-$logged_in = FALSE;
+$logged_in = false;
 $user_id = 0;
 $username = "";
 $email = "";
-$admin = FALSE;
+$admin = false;
 
 // assumes db.php has been required already
 if ($sessid = $_COOKIE["sessid"]) {
@@ -17,7 +17,7 @@ if ($sessid = $_COOKIE["sessid"]) {
     $result = $query->get_result();
 
     if ($row = $result->fetch_assoc()) {
-        $logged_in = TRUE;
+        $logged_in = true;
         $user_id = $row['id'];
         $username = $row['username'];
         $email = $row['email'];
@@ -30,7 +30,9 @@ if ($logged_in) :
     <a href="#">☺︎ <?= $username ?></a> <br>
     <a href="/logout">log out</a> <br>
     <a href="#">add an entry</a> <br>
-    <?php if ($admin) { echo '<a href="#">administrate</a>'; } ?>
+    <?php if ($admin) {
+    echo '<a href="#">administrate</a>';
+} ?>
 <?php else : ?>
     <?php setcookie("sessid", null, -1, "/") ?>
     <a href="/login">log in / sign up</a>
