@@ -16,24 +16,36 @@
 
             <p>
                 <em>tode</em> is a place where you can browse a database of equations,
-                identities, and formulae. It's written in PHP, using an Apache
-                web server and a MySQL database. The source is
+                identities, and formulae. The source is
                 <a href="https://github.com/Zac-Garby/tode">hosted on GitHub</a>
                 so you can play around with it and change things, as well as
                 hosting your own version with your own database.
             </p>
 
             <p>
-                You can also add items to the database, just ensure they're
-                correct. First, you'll need to make an account, or log
-                in if you already have one. Then, there'll be a button on this
-                page which you can press to add your own equation, identity, or
-                formula.
+                You can also add items to the database. First, make an account.
+                Then a button will appear on this page labelled "Add equation".
             </p>
 
             <h3>Search:</h3>
             <form class="search" action="search.php" method="get">
-                <input type="text" name="query" placeholder="e.g. #100, sin, chain rule">
+                <p>
+                    Search through the database by ID, description, equation,
+                    category, or user. A query is any number of sub-queries
+                    separated by <code>and</code>. A sub query takes the form
+                    <code>var [= or ~ or !=] val</code>, where <code>var</code>
+                    is one of <code>id</code>, <code>eq</code>, <code>desc</code>,
+                    or <code>user</code>. <code>=</code> searches for exact
+                    matches, <code>~</code> for partial matches, and <code>!=</code>
+                    for anything but.
+                </p>
+
+                <p>
+                    A query which isn't in that form is interpreted as a partial
+                    match on the description or equation.
+                </p>
+
+                <input type="text" name="query" placeholder="e.g. eq~a and user=pythagoras">
                 <input type="submit" value="Search">
             </form>
 
