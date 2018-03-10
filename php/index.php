@@ -14,6 +14,23 @@
             <h1><a href="/">tode</a></h1>
             <h2>The Online Directory of Equations, Identities, and Formulae</h2>
 
+            <p>
+                <em>tode</em> is a place where you can browse a database of equations,
+                identities, and formulae. It's written in PHP, using an Apache
+                web server and a MySQL database. The source is
+                <a href="https://github.com/Zac-Garby/tode">hosted on GitHub</a>
+                so you can play around with it and change things, as well as
+                hosting your own version with your own database.
+            </p>
+
+            <p>
+                You can also add items to the database, just ensure they're
+                correct. First, you'll need to make an account, or log
+                in if you already have one. Then, there'll be a button on this
+                page which you can press to add your own equation, identity, or
+                formula.
+            </p>
+
             <h3>Search:</h3>
             <form class="search" action="search.php" method="get">
                 <input type="text" name="query" placeholder="e.g. #100, sin, chain rule">
