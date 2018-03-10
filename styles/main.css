@@ -141,3 +141,9 @@ code {
     font-weight: normal;
     font-style: italic;
 }
+
+span.error {
+    background-color: transparent;
+    display: block;
+    text-align: center;
+}

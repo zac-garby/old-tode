@@ -12,14 +12,16 @@
             <h2>log-in or sign-up</h2>
 
             <div class="forms">
-                <form class="login" action="newsession" method="post">
+                <form class="login" id="login">
                     <h3>Log-in to an existing account:</h3>
+                    <span id="login-err"></span>
+
                     <input type="text" name="username" placeholder="Username">
                     <input type="password" name="password" placeholder="Password">
                     <input type="submit" value="Log in">
                 </form>
 
-                <form class="signup" action="newuser" method="post">
+                <form class="signup" id="signup">
                     <h3>Create a new account:</h3>
                     <input type="text" name="username" placeholder="Username">
                     <input type="text" name="email" placeholder="Email">
@@ -29,4 +31,5 @@
             </div>
         </div>
     </body>
+    <script src="js/login.js" charset="utf-8"></script>
 </html>

@@ -13,8 +13,8 @@ $result = $query->get_result();
 $row = $result->fetch_assoc();
 
 if (!$row) {
-    http_response_code(403);
-    echo "user doesn't exist";
+    echo '{"error": "username"}';
+    sleep(0.1);
     return;
 }
 
@@ -24,8 +24,8 @@ $remote_hash = $row['password_hash'];
 $calculated_hash = hash("sha256", $password . $salt);
 
 if ($remote_hash != $calculated_hash) {
-    http_response_code(403);
-    echo "wrong password";
+    echo '{"error": "password"}';
+    sleep(0.1);
     return;
 }
 // else: the login was successful
@@ -44,9 +44,10 @@ $query->bind_param("si", $sessid, $userid);
 $query->execute();
 
 if ($link->errno) {
-    http_response_code(500);
-    echo $link->error;
+    echo '{"error": "database"}';
+    sleep(0.1);
     return;
 }
 
 setcookie("sessid", $sessid);
+echo '{"error": null}';
