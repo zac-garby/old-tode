@@ -8,7 +8,7 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
     </head>
     <body>
-        <a href="./login" class="login">log in / sign up</a>
+        <a href="/login" class="login">log in / sign up</a>
         <div class="wrapper">
             <h1><a href="/">tode</a></h1>
 
