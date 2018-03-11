@@ -13,7 +13,7 @@ if (isset($_COOKIE["sessid"])) {
     INNER JOIN users ON sessions.userid = users.id
     WHERE sessions.sessid = ?");
 
-    $query->bind_param("i", $sessid);
+    $query->bind_param("s", $sessid);
     $query->execute();
     $result = $query->get_result();
 
