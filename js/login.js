@@ -2,6 +2,8 @@ function onlogin(evt) {
     var req = new XMLHttpRequest()
     var form = document.getElementById("login")
 
+    error("", "login")
+
     req.onreadystatechange = function(evt) {
         if (req.readyState !== 4) return
         if (req.status !== 200) {
@@ -42,6 +44,8 @@ function onsignup(evt) {
     var req = new XMLHttpRequest()
     var form = document.getElementById("signup")
 
+    error("", "signup")
+
     req.onreadystatechange = function(evt) {
         if (req.readyState !== 4) return
         if (req.status !== 200) {
@@ -52,12 +56,21 @@ function onsignup(evt) {
         var content = JSON.parse(req.responseText)
 
         switch (content.error) {
-        case "username":
+        case "username taken":
             error("user already exists. did you mean to log in?", "signup")
             return false
-        case "email":
+        case "email taken":
             error("a user already exists with that email. is it you?", "signup")
             return false
+        case "username invalid":
+            error("invalid username. must be 4-32 letters, numbers, spaces, or any of -.:")
+            return false
+        case "password invalid":
+            error("invalid password. must be at least 6 characters long")
+            return false;
+        case "email invalid":
+            error("email invalid. must be syntactically valid with a real domain")
+            return false;
         case null:
             window.location.href = `https://${window.location.host}/`
             return false

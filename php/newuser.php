@@ -6,6 +6,36 @@ $username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 
+// Check username, email, and password are lexically valid
+if (!preg_match("/[\w\d-.: ]{4,32}/", $username)) {
+    echo '{"error": "username invalid"}';
+    sleep(0.1);
+    return;
+}
+
+if (strlen($password) < 6) {
+    echo '{"error": "password invalid"}';
+    sleep(0.1);
+    return;
+}
+
+$email_valid = false;
+
+if (!empty($email)) {
+    $domain = ltrim(stristr($email, "@"), "@") . ".";
+    $user = stristr($email, "@", true);
+
+    if (!empty($user) && !empty($domain) && checkdnsrr($domain)) {
+        $email_valid = true;
+    }
+}
+
+if (!$email_valid) {
+    echo '{"error": "email invalid"}';
+    sleep(0.1);
+    return;
+}
+
 // Check if a user already exists with the same email or username
 $query = $link->prepare("SELECT admin FROM users
 WHERE username = ?");
@@ -14,7 +44,7 @@ $query->execute();
 $result = $query->get_result();
 
 if ($row = $result->fetch_assoc()) {
-    echo '{"error": "username"}';
+    echo '{"error": "username taken"}';
     sleep(0.1);
     return;
 }
@@ -26,7 +56,7 @@ $query->execute();
 $result = $query->get_result();
 
 if ($row = $result->fetch_assoc()) {
-    echo '{"error": "email"}';
+    echo '{"error": "email taken"}';
     sleep(0.1);
     return;
 }
