@@ -57,7 +57,7 @@
                 <?php
                 $result = mysqli_query(
                     $link,
-                    "SELECT ID, equation, description
+                    "SELECT id, equation, description
                     FROM equations
                     ORDER BY RAND()
                     LIMIT 5"

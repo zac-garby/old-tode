@@ -27,6 +27,8 @@
 
                 <form class="signup" id="signup">
                     <h3>Create a new account:</h3>
+                    <span id="signup-err"></span>
+
                     <input type="text" name="username" placeholder="Username">
                     <input type="text" name="email" placeholder="Email">
                     <input type="password" name="password" placeholder="Password">

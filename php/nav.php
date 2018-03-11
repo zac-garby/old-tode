@@ -7,7 +7,8 @@ $email = "";
 $admin = false;
 
 // assumes db.php has been required already
-if ($sessid = $_COOKIE["sessid"]) {
+if (isset($_COOKIE["sessid"])) {
+    $sessid = $_COOKIE["sessid"];
     $query= $link->prepare("SELECT users.id, users.username, users.email, users.admin FROM sessions
     INNER JOIN users ON sessions.userid = users.id
     WHERE sessions.sessid = ?");

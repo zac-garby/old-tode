@@ -21,6 +21,10 @@ $router->map('POST', '/newsession', function () {
     require __DIR__ . "/php/newsession.php";
 });
 
+$router->map('POST', '/newuser', function () {
+    require __DIR__ . '/php/newuser.php';
+});
+
 $router->map('GET', '/logout', function () {
     require __DIR__ . "/php/logout.php";
 });
