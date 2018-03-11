@@ -95,6 +95,7 @@ table.equations tr {
 table.equations td {
     overflow: hidden;
     height: 30px;
+    white-space: nowrap;
 }
 
 table.equations td:nth-child(1) {
@@ -144,4 +145,42 @@ span.error {
     background-color: transparent;
     display: block;
     text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    div.nav {
+        position: relative;
+    }
+
+    div.wrapper {
+        padding: 10px;
+        width: 100%;
+    }
+
+    table.equations td:nth-child(1) {
+        padding-left: 15px;
+    }
+
+    div.forms {
+        flex-direction: column;
+    }
+
+    div.forms form {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    table.equations td:nth-child(3) {
+        display: none;
+    }
+
+    h1, h2 {
+        text-align: left !important;
+        padding-left: 15px;
+    }
+
+    div.wrapper h1:first-child {
+        margin-top: 5px;
+    }
 }
