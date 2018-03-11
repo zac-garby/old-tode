@@ -7,14 +7,9 @@ new ones to the database.
 
 ## To do
 
- - Equation pages, `/eq/{id}`
  - API
      - `/id/{id}`
      - `/search/{query}`
      - `/random`
      - `/random/{amount}`
  - Querying
- - Users
-    - Signing up
-    - Logging in
-    - User pages
