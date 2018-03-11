@@ -28,7 +28,7 @@ if (isset($_COOKIE["sessid"])) {
 
 if ($logged_in) :
 ?>
-    <a href="#">☺︎ <?= $username ?></a> <br>
+    <a href="/user/<?=$username?>">☺︎ <?= $username ?></a> <br>
     <a href="/logout">log out</a> <br>
     <a href="#">add an entry</a> <br>
     <?php

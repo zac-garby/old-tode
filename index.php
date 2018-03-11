@@ -16,6 +16,10 @@ $router->map('GET', '/eq/[i:id]', function ($id) {
     require __DIR__ . "/php/equation.php";
 });
 
+$router->map('GET', '/user/[*:name]', function ($name) {
+    require __DIR__ . "/php/userpage.php";
+});
+
 // Non-page routes
 $router->map('POST', '/newsession', function () {
     require __DIR__ . "/php/newsession.php";
