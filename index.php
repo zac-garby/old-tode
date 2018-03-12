@@ -5,32 +5,32 @@ $router = new AltoRouter();
 
 // Pages
 $router->map('GET', '/', function () {
-    require __DIR__ . '/php/index.php';
+    require __DIR__ . '/php/pages/home.php';
 });
 
 $router->map('GET', '/login', function () {
-    require __DIR__ . '/php/login.php';
+    require __DIR__ . '/php/pages/login.php';
 });
 
 $router->map('GET', '/eq/[i:id]', function ($id) {
-    require __DIR__ . "/php/equation.php";
+    require __DIR__ . "/php/pages/equation.php";
 });
 
 $router->map('GET', '/user/[*:name]', function ($name) {
-    require __DIR__ . "/php/userpage.php";
+    require __DIR__ . "/php/pages/user.php";
 });
 
 // Non-page routes
 $router->map('POST', '/newsession', function () {
-    require __DIR__ . "/php/newsession.php";
+    require __DIR__ . "/php/actions/newsession.php";
 });
 
 $router->map('POST', '/newuser', function () {
-    require __DIR__ . '/php/newuser.php';
+    require __DIR__ . '/php/actions/newuser.php';
 });
 
 $router->map('GET', '/logout', function () {
-    require __DIR__ . "/php/logout.php";
+    require __DIR__ . "/php/actions/logout.php";
 });
 
 $match = $router->match();

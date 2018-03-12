@@ -8,8 +8,8 @@
     </head>
     <body>
         <?php
-        require "db.php";
-        require "nav.php";
+        require "php/db.php";
+        require "php/nav.php";
         ?>
         <div class="wrapper">
             <h1><a href="/">tode</a></h1>

@@ -1,6 +1,6 @@
 <?php
 
-require "db.php";
+require "php/db.php";
 
 $username = $_POST['username'];
 $email = $_POST['email'];

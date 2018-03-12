@@ -9,14 +9,13 @@
     </head>
     <body>
         <?php
-        require "db.php";
-        require "nav.php";
+        require "php/db.php";
+        require "php/nav.php";
         ?>
         <div class="wrapper">
             <h1><a href="/">tode</a></h1>
 
             <?php
-            require "db.php";
             require "vendor/Parsedown.php";
 
             $query = $link->prepare("SELECT equations.*, users.id, users.username
