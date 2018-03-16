@@ -20,6 +20,10 @@ $router->map('GET', '/user/[*:name]', function ($name) {
     require __DIR__ . "/php/pages/user.php";
 });
 
+$router->map('GET', '/new', function () {
+    require __DIR__ . "/php/pages/add.php";
+});
+
 // Non-page routes
 $router->map('POST', '/newsession', function () {
     require __DIR__ . "/php/actions/newsession.php";

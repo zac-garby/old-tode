@@ -30,7 +30,7 @@ if ($logged_in) :
 ?>
     <a href="/user/<?=$username?>">☺︎ <?= $username ?></a> <br>
     <a href="/logout">log out</a> <br>
-    <a href="#">add an entry</a> <br>
+    <a href="/new">add an entry</a> <br>
     <?php
     if ($admin) : ?>
         <a href="#">administrate</a>

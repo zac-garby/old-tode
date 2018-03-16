@@ -66,6 +66,11 @@ form input {
     padding: 5px;
     border: 1px solid grey;
     background-color: white;
+    outline: 0;
+}
+
+form input.mono {
+    font-family: monospace;
 }
 
 form input[type=text], form input[type=password] {
@@ -80,6 +85,15 @@ form input[type=submit] {
     font-weight: bold;
     font-size: 0.8em;
     cursor: pointer;
+}
+
+form textarea {
+    width: 100%;
+    padding: 5px;
+    outline: 0;
+    font-family: monospace;
+    border-radius: 2px;
+    border-color: grey;
 }
 
 table.equations {
@@ -133,18 +147,11 @@ code {
     text-align: center;
 }
 
-.error {
+span[id$=-err] {
     color: rgb(221, 28, 28);
-    background-color: rgba(205, 89, 89, 0.25);
-    padding: 5px;
-    font-weight: normal;
+    font-weight: bold;
     font-style: italic;
-}
-
-span.error {
-    background-color: transparent;
     display: block;
-    text-align: center;
 }
 
 @media only screen and (max-width: 800px) {
