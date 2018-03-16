@@ -30,7 +30,7 @@ if (!$logged_in) {
                 question.
             </p>
 
-            <form id="form" action="/addpage">
+            <form id="form" action="/newequation">
                 <h3>Enter the details of your equation:</h3>
                 <p>
                     Again, make sure it's correct. If it is correct, but you
